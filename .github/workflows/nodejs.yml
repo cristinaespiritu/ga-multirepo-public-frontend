@@ -12,7 +12,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-      - uses: actions/upload-artifact@master
+      - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
           path: public/
@@ -27,7 +27,7 @@ jobs:
         
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/download-artifact@master
+    - uses: actions/download-artifact@main
       with:
         name: webpack artifacts
         path: public
